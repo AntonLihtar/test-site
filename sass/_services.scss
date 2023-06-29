@@ -1,0 +1,158 @@
+.services {
+
+    &-title {
+        margin-top: 55px;
+        color: $main-color;
+        font-size: 42px;
+        font-family: Circe;
+        font-weight: 800;
+        line-height: 120%;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(200px, auto));
+        justify-items: center;
+        /* gap: 30px;*/
+    }
+
+    /* ------свг круги------ */
+    .svg-circle {
+        width: 50px;
+        height: 50px;
+        fill: rgba(236, 236, 249, 1);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.5s;
+
+        ellipse,
+        circle {
+            fill: inherit;
+        }
+    }
+
+    /* ------формируем блоки------ */
+    &-block {
+        width: 270px;
+        margin-top: 46px;
+
+        &__title {
+            margin-top: 14px;
+            padding: 0 20px;
+            color: $black-color;
+            font-size: 23px;
+            font-weight: 400;
+            font-family: Circe;
+            line-height: 150%;
+        }
+
+        &__price {
+            padding: 0 24px;
+            color: $black-color;
+            font-size: 24px;
+            font-family: Circe;
+            font-weight: 800;
+            line-height: 150%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &:hover {
+            .services-foto {
+                background-color: $main-color;
+
+                /* ------круг в фоне----- */
+                &:before {
+                    width: 375px;
+                    height: 375px;
+                    background: radial-gradient(94.25% 94.25% at 50.00% 5.75%, #C3A78E 0%, rgba(195, 167, 142, 0.00) 100%);
+                }
+
+                &__img_blur {
+                    display: block;
+                }
+            }
+
+            .svg-circle {
+                fill: rgba(195, 167, 142, 1);
+            }
+
+
+
+        }
+    }
+
+    &-foto {
+        overflow: hidden;
+        position: relative;
+        width: 270px;
+        height: 270px;
+        background-color: #D2D2DB;
+        border-radius: 25px;
+        transition: all 0.5s;
+
+        /* ------круг в фоне----- */
+        &:before {
+            content: "";
+            display: block;
+            width: 318px;
+            height: 318px;
+            transition: all 0.3s;
+
+            background: rgba(195, 196, 208, 1);
+            border-radius: 100%;
+
+            position: absolute;
+            bottom: -159px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        &__img {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+
+            //болонка и кошка сдвинута вправо
+            &_right {
+                left: 60%
+            }
+
+            &_blur {
+                display: none;
+                filter: blur(9.5px);
+            }
+        }
+    }
+
+    /* ------круги с боков------ */
+    .container {
+        &:before {
+            content: "";
+            width: 237px;
+            height: 650px;
+            background-image: url("../img/services_after_before/left_c.svg");
+            position: absolute;
+            left: -337px;
+            top: 185px;
+        }
+
+        &:after {
+            content: "";
+            width: 182px;
+            height: 375px;
+            background-image: url("../img/services_after_before/right_c.svg");
+            position: absolute;
+            right: -325px;
+            top: 252px;
+        }
+    }
+}

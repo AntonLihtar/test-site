@@ -1,0 +1,72 @@
+.swiper {
+    max-width: 1920px;
+    height: 940px;
+    margin: 0 auto;
+
+    .container{
+        height: 100%;
+    }
+
+    &-slide {
+        width: 100%;;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: 62%;
+        background-size: cover; 
+    }
+}
+
+.slide-text {
+    width: 465px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__title {
+        color: $main-color;
+        font-size: 42px;
+        font-family: Circe;
+        font-weight: 800;
+        line-height: 120%;
+    }
+
+    &__content {
+        margin-top: 10px;
+        color: $header-text-color;
+        font-size: 16px;
+        font-family: Circe;
+        line-height: 140%;
+    }
+    /* ------кнопка------ */
+    &__btn {
+        margin-top: 40px;
+        height: 50px;
+        width: 225px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background: linear-gradient(12deg, #743837 18%, #C3A78E 221%);
+        box-shadow: 0px 5px 10px 0px rgba(116, 64, 55, 0.75), 0px 2px 0px 0px #6C3232;
+
+        color: #FFF;
+        font-size: 16px;
+        font-family: Circe;
+        line-height: 100%;
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: linear-gradient(180deg, #6C3232 0%, #7F4743 100%);
+            box-shadow: 0px 2px 10px 0px rgba(116, 64, 55, 0.60), 0px 1px 0px 0px #6C3232, 0px 4px 9px 0px #552727 inset;
+        }
+
+        &:active {
+            background: linear-gradient(180deg, #AC8E73 21.89%, #C3A78E 100%);
+            box-shadow: 0px 2px 10px 0px #BA9A7D, 0px 1px 0px 0px #9F7D5E, 0px 4px 9px 0px #97806B inset;
+        }
+    }
+}

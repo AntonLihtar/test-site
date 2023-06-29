@@ -1,0 +1,281 @@
+/* плавный скролл */
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+@media(max-width:1200px) {
+    .swiper {
+        height: 800px;
+    }
+
+    .slide-text {
+        left: 20px;
+    }
+
+    /* отступы меню справа и слева */
+    .header-w {
+        padding: 0 2% 0 2%;
+        height: 80px;
+
+        &-menu {
+            width: 400px;
+
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .services {
+        &-title {
+            margin-top: 20px;
+            font-size: 36px;
+        }
+
+        &-block {
+            width: 200px;
+            margin-top: 26px;
+
+            &:hover {
+                .services-foto {
+                    &:before {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        &-foto {
+            width: 200px;
+            height: 200px;
+
+            &:before {
+                width: 258px;
+                height: 258px;
+            }
+        }
+
+        .container {
+            padding: 0 2% 0 2%;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 2% 0 2%;
+    }
+
+    .header-w {
+        &-burger {
+            margin-right: 10px;
+            display: block;
+        }
+
+        &-menu {
+            display: none;
+        }
+    }
+
+    .swiper {
+        height: 700px;
+    }
+
+    .slide-text {
+        width: 300px;
+
+        &__title {
+            font-size: 30px;
+        }
+    }
+
+    .services {
+        &-block {
+            width: 160px;
+            margin-top: 26px;
+
+            &:hover {
+                .services-foto {
+                    &:before {
+                        width: 250px;
+                        height: 250px;
+                    }
+                }
+            }
+
+            &__title {
+                margin-top: 8px;
+                font-size: 18px;
+                line-height: 100%;
+            }
+
+            &__price {
+                font-size: 18px;
+                margin-top: 6px;
+            }
+        }
+
+        &-foto {
+            width: 160px;
+            height: 160px;
+
+            &:before {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+
+    .header-w {
+        top: 10px;
+
+        &-icons {
+            display: none;
+        }
+
+    }
+
+    .swiper {
+        height: 550px;
+    }
+
+
+    .slide-text {
+        &__content {
+            display: none;
+        }
+
+        &__btn {
+            margin-top: 20px;
+        }
+    }
+
+
+    .services {
+        &-title {
+            font-size: 32px;
+        }
+
+        &-content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &-block {
+            margin-top: 13px;
+
+            &__price {
+                margin-top: 0;
+                padding: 0 14px;
+                font-size: 16px;
+            }
+
+
+            &__title {
+                padding: 0 14px;
+                margin-top: 6px;
+                font-size: 16px;
+                line-height: 100%;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header-w {
+        height: 60px;
+
+        &-cont {
+            width: 142px;
+
+            &__phone {
+                font-size: 18px;
+            }
+
+            &__addres {
+                text-align: end;
+                font-size: 14px;
+            }
+        }
+
+        &-burger {
+            margin-right: 5px;
+        }
+    }
+
+    .swiper {
+        height: 450px;
+
+        &-slide {
+            background-position: 70%;
+        }
+    }
+
+    .slide-text {
+        width: 80%;
+        border-radius: 20px;
+        padding: 2%;
+        background: #ffffffaf;
+        top: auto;
+        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2%;
+        text-align: center;
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+
+    .services {
+        &-title {
+            margin-top: 12px;
+            font-size: 28px;
+        }
+
+        &-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .services {
+        &-block {
+            width: 120px;
+
+            &:hover {
+                .services-foto {
+                    &:before {
+                        width: 225px;
+                        height: 225px;
+                    }
+                }
+            }
+        }
+
+        &-foto {
+            width: 120px;
+            height: 120px;
+
+            &:before {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+}

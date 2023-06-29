@@ -1,0 +1,157 @@
+.header {
+    .container {
+        position: relative;
+    }
+
+    &-w {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        height: 100px;
+
+        top: 20px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+
+        &-logo {
+            height: 100%;
+            width: auto;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &-menu,
+        &-icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-menu {
+            width: 526px;
+
+            li {
+                display: block;
+                list-style-type: none;
+                font-size: 20px;
+                font-family: Circe;
+                line-height: 150%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    color: $header-text-color;
+
+                    &:hover {
+                        color: $black-color;
+                    }
+                }
+            }
+        }
+
+        &-icons {
+            width: 120px;
+
+            &__item {
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: $main-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:hover {
+                    background-color: $main-hover-color;
+                }
+            }
+        }
+
+        &-cont {
+            width: 245px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+
+            &__phone {
+                color: $main-color;
+                font-family: Circe;
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 100%;
+
+                &:hover {
+                    color: $main-hover-color;
+                }
+            }
+
+            &__addres {
+                color: $header-text-color;
+                font-size: 16px;
+                font-family: Circe;
+                line-height: 100%;
+
+                &:hover {
+                    color: $black-color;
+                }
+            }
+
+        }
+
+        &-burger {
+            display: none;
+            width: 40px;
+            position: relative;
+
+            .burger {
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                    width: inherit;
+                    height: 6px;
+                    border-radius: 2px;
+                    background-color: $main-color;
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        width: inherit;
+                        height: inherit;
+                        border-radius: inherit;
+                        background-color: inherit;
+                        position: absolute;
+                        left:0;
+                    }
+
+                    &:before {
+                        top:0;
+                    }
+                    &:after{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
