@@ -209,7 +209,8 @@
             width: 70%;
             flex-direction: column;
         }
-        &__form{
+
+        &__form {
             width: 100%;
         }
 
@@ -225,8 +226,15 @@
                 margin: 21px;
             }
         }
+    }
 
+    .popup-answer {
+        width: 90%;
+        padding: 20px 50px;
 
+        &__title {
+            font-size: 28px;
+        }
     }
 }
 
@@ -293,11 +301,19 @@
             width: 400px;
             padding: 3% 7%;
         }
-        &__forms{
+
+        &__forms {
             width: 90%;
         }
-        &-block__text{
+
+        &-block__text {
             font-size: 14px;
+        }
+    }
+
+    .popup-answer {
+        &__title {
+            font-size: 24px;
         }
     }
 }
