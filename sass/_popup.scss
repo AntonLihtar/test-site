@@ -5,7 +5,10 @@
     height: 100%;
     background: #000000bd;
     z-index: 5;
-
+    
+    &_active{
+        display: none;
+    }
 
     &-wrapper {
         width: 745px;
