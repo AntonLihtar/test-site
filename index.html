@@ -12,6 +12,7 @@
 
 <body>
     <div class="wrapper">
+
         <header class="header">
             <div class="container">
                 <div class="header-w">
@@ -51,7 +52,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide" style="background-image: url('img/slider/banner.png');">
-                        <!-- <img src="img/slider/banner.png" alt="banner"> -->
+
                         <div class="container">
                             <div class="slide-text">
                                 <div class="slide-text__title">Первый СПА-салон
@@ -270,9 +271,36 @@
                 </div>
             </div>
         </section>
+
+
+
     </div>
-    <section class="price"></section>
+    <section class="popup">
+        <div class="popup-wrapper">
+            <div class="popup__title">Заказать звонок</div>
+            <div class="popup__forms">
+                <span class="popup__form">
+                    <input type="text" placeholder="Ваше имя" value size="40">
+                </span>
+                <span class="popup__form">
+                    <input id="phone" type="text" placeholder="+7(___) ___-__-__">
+                </span>
+            </div>
+            <div class="popup-block">
+                <div class="popup-block__text">Нажимая "Отправить", Вы соглашаетесь с
+                    <span href="#">политикой обработки персональных данных</span>
+                </div>
+                <button class="slide-text__btn popup__btn"><img src="icons/header/logo_btn.svg"
+                        alt="icon">Записаться</button>
+            </div>
+            <svg >
+                <use href="icons/close.svg#close"></use>
+            </svg>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/script.js"></script>
 
 </body>
