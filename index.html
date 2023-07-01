@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="body-class">
+    
+    <div class="mobile-menu">
+        <ul class="mobile-w-menu">
+            <li><a class="mobile_hover" href="#services">Наши услуги</a></li>
+            <li><a class="mobile_hover" href="#">О компании</a></li>
+            <li><a class="mobile_hover" href="#">Отзывы</a></li>
+            <li><a class="mobile_hover" href="#">Контакты</a></li>
+        </ul>
+    </div>
+
     <!-- обертка для тени страницы -->
     <div class="wrapper">
 
@@ -286,19 +296,19 @@
     <div class="popup popup_active">
         <div class="popup-wrapper">
             <div class="popup__title">Заказать звонок</div>
-            <div class="popup__forms">
+            <form class="popup__forms" id="form">
                 <span class="popup__form">
-                    <input id="name" type="text" placeholder="Ваше имя" value size="40">
+                    <input id="name" type="text" placeholder="Ваше имя" required>
                 </span>
                 <span class="popup__form">
-                    <input id="phone" type="text" placeholder="+7(___) ___-__-__">
+                    <input id="phone" type="text" placeholder="+7(___) ___-__-__" required>
                 </span>
-            </div>
+            </form>
             <div class="popup-block">
                 <div class="popup-block__text">Нажимая "Отправить", Вы соглашаетесь с
                     <span href="#">политикой обработки персональных данных</span>
                 </div>
-                <button class="slide-text__btn popup__btn"><img src="icons/header/logo_btn.svg"
+                <button type="submit" class="slide-text__btn popup__btn" form="form"><img src="icons/header/logo_btn.svg"
                         alt="icon">Записаться</button>
             </div>
             <svg>

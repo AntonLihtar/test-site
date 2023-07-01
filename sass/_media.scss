@@ -75,12 +75,17 @@
     }
 
     .header-w {
-        &-burger {
-            margin-right: 10px;
-            display: block;
+        &-menu {
+            min-width: 330px;
+            justify-content: space-around;
+
+            li {
+                font-size: 15px;
+            }
         }
 
-        &-menu {
+        //скрываем иконки тг/ ватсап/ вк
+        &-icons {
             display: none;
         }
     }
@@ -140,10 +145,20 @@
     .header-w {
         top: 10px;
 
-        &-icons {
-            display: none;
+        //появляется бургер
+        &-burger {
+            margin-right: 10px;
+            display: block;
         }
 
+        //меню становится вертикальным
+        &-menu {
+            display: none;
+        }
+    }
+
+    .mobile-w-menu {
+        display: block;
     }
 
     .swiper {
@@ -281,7 +296,7 @@
         text-align: center;
 
         &__title {
-            font-size: 22px;
+            font-size: 20px;
         }
     }
 

@@ -12,7 +12,7 @@
         top: 20px;
         left: 0;
         right: 0;
-        z-index: 3;
+        z-index: 10;
 
         &-logo {
             height: 100%;
@@ -101,6 +101,7 @@
                 font-size: 16px;
                 font-family: Circe;
                 line-height: 100%;
+                text-align: end;
 
                 &:hover {
                     color: $black-color;
@@ -116,41 +117,72 @@
 
             .burger {
                 position: absolute;
-                top:50%;
+                top: 50%;
                 transform: translateY(-50%);
-                width: 100%;
+                width: 40px;
                 height: 30px;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
+
 
                 span {
                     display: block;
-                    width: inherit;
+                    width: 40px;
                     height: 6px;
                     border-radius: 2px;
                     background-color: $main-color;
+                    transition: all 0.3s;
+                }
 
+                &:before,
+                &:after {
+                    content: "";
+                    width: 40px;
+                    height: 6px;
+                    border-radius: 2px;
+                    background-color: $main-color;
+                    position: absolute;
+                    transition: all 0.3s;
+                }
+
+                &:before {
+                    top: 0;
+                }
+
+                &:after {
+                    bottom: 0;
+                }
+
+                &:hover {
+
+                    span,
                     &:before,
                     &:after {
-                        content: "";
-                        width: inherit;
-                        height: inherit;
-                        border-radius: inherit;
-                        background-color: inherit;
-                        position: absolute;
-                        left:0;
+                        background-color: $main-hover-color;
+                    }
+
+                }
+
+                &.active {
+                    span {
+                        transform: scale(0);
+
+                    }
+
+                    &:after {
+                        bottom: 33%;
+                        transform: rotate(-45deg) translate(0, -50%);
                     }
 
                     &:before {
-                        top:0;
-                    }
-                    &:after{
-                        bottom: 0;
+
+                        top: 33%;
+                        transform: rotate(45deg) translate(0, 50%);
                     }
                 }
             }
         }
-
     }
 
 
